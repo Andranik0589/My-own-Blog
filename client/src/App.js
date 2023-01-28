@@ -1,13 +1,14 @@
-import './App.css';
-import { Layout } from './components/Layout';
+import React from 'react';
+import './App.scss';
 import { Routes, Route } from 'react-router-dom';
-import MainPage from './pages/MainPage';
-import PostsPage from './pages/PostsPage';
-import PostPage from './pages/PostPage';
-import AddPostPage from './pages/AddPostPage';
-import LoginPage from './pages/LoginPage';
-import RegisterPage from './pages/RegisterPage';
-import EditPostPage from './pages/EditPostPage';
+import Layout from './components/Layout.jsx';
+import MainPage from './pages/MainPage.jsx';
+import PostsPage from './pages/PostsPage.jsx';
+import PostPage from './pages/PostPage.jsx';
+import EditPostPage from './pages/EditPostPage.jsx';
+import AddPostPage from './pages/AddPostPage.jsx';
+import RegisterPage from './pages/RegisterPage.jsx';
+import LoginPage from './pages/LoginPage.jsx';
 
 function App() {
   return (
@@ -16,10 +17,10 @@ function App() {
         <Route path="/" element={<MainPage />} />
         <Route path="posts" element={<PostsPage />} />
         <Route path=":id" element={<PostPage />} />
-        <Route path="new" element={<AddPostPage />} />
-        <Route path="login" element={<LoginPage />} />
-        <Route path="register" element={<RegisterPage />} />
         <Route path=":id/edit" element={<EditPostPage />} />
+        <Route path="new" element={<AddPostPage />} />
+        <Route path="register" element={<RegisterPage />} />
+        <Route path="login" element={<LoginPage />} />
       </Routes>
     </Layout>
   );
